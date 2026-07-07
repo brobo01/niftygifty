@@ -12,6 +12,7 @@ export const useStore = create((set) => ({
     interests: [],
     personality: {},
   },
+  loading: false,
 
   // flexible updater
   updateFilter: (key, value, type = "replace") =>
@@ -58,6 +59,13 @@ export const useStore = create((set) => ({
   updateIdeas: (ideas) => {
     set((state) => ({
       ideas: [...ideas, ...state.ideas],
+      loading: !state.loading,
+    }))
+  },
+
+  toggleLoading: () => {
+    set((state) => ({
+      loading: !state.loading,
     }))
   },
 }))

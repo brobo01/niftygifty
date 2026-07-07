@@ -5,10 +5,17 @@ import { useStore } from "@/store/useStore"
 import { fetchIdeas } from "@/services/giftService"
 import { generatePrompt } from "@/services/generatePrompt"
 import { personalityStyle } from "@/data/giftingFields"
+import data from "@/data/sampleIdeas.json"
 
 export default function ButtonConfirm(props) {
-  const { ideas, filters, updateIdeas } = useStore()
+  const { ideas, filters, updateIdeas, loading, toggleLoading } = useStore()
   const submit = async () => {
+    toggleLoading()
+    // console.log(ideas.length)
+    // const help = data[ideas.length]
+    // setTimeout(() => {
+    //   updateIdeas([help])
+    // }, 3000)
     const prompt = generatePrompt({ ideas, filters })
     const data = await fetchIdeas({
       prompt,
@@ -116,8 +123,8 @@ export default function ButtonConfirm(props) {
 
       <div className={styles.submit_section}>
         <h3>If you are happy with that, then lets create some gift ideas!</h3>
-        <button className={styles.lets_go} onClick={submit}>
-          <h3>Generate gift ideas</h3>
+        <button className={styles.lets_go} onClick={submit} disabled={loading}>
+          <h3>{loading ? "Generating" : "Generate gift ideas"}</h3>
         </button>
       </div>
     </div>
