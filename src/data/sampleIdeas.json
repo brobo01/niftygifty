@@ -1,0 +1,47 @@
+[
+  {
+    "category": "Connected Tech 1",
+    "description": "The Lovebox is a connected messaging device that pairs with an app. When you send a message, photo, or drawing from your phone, the chunky red heart on the front of the wooden box spins to notify her. She opens the lid to see your message on the internal screen. Emotional Tone: Intimate and Nurturing. Originality Score: 9/10.",
+    "name": "Lovebox Color & Photo Messenger 1",
+    "price": "£95.00",
+    "product_image_url": "https://en.lovebox.love/cdn/shop/files/LoveboxColor_Photo_1_1000x.jpg",
+    "url": "https://en.lovebox.love/",
+    "why_it_fits": "This gift creates a unique digital bridge between a parent and daughter. It satisfies her interest in technology while providing a dedicated, screen-time-free space for emotional connection. Unlike a standard text, it makes your communication a physical event, making it the perfect sentimental yet tech-forward birthday gift."
+  },
+  {
+    "category": "Music Technology",
+    "description": "A micro-sampler and sequencer that fits in the palm of her hand. It features a built-in microphone for sampling any sound, 40 seconds of sample memory, and an animated LCD display. It’s a cult-favorite piece of high-end music technology. Emotional Tone: Playful and Inspiring. Originality Score: 10/10.",
+    "name": "Teenage Engineering Pocket Operator PO-33 KO!",
+    "price": "£85.00",
+    "product_image_url": "https://m.media-amazon.com/images/I/71R2H2r6mSL._AC_SL1500_.jpg",
+    "url": "https://teenage.engineering/products/po",
+    "why_it_fits": "For a daughter into tech, this is the ultimate 'cool' gadget. It’s not just a toy; it's a legitimate tool used by producers. It appeals to the 'tinkerer' mindset, allowing her to deconstruct the world around her into music. It’s distinct, portable, and feels like a specialized piece of engineering."
+  },
+  {
+    "name": "EleksMaker EleksTube IPS Digital Clock",
+    "description": "A modern 'Nixie' style clock that uses six gold-plated IPS screens to simulate vintage vacuum tube displays. It can be customized via software to show different dial styles, uploaded photos, or weather data. Emotional Tone: Sophisticated and Retro-Futuristic. Originality Score: 9/10.",
+    "price": "£89.00",
+    "why_it_fits": "This fits the 'tech enthusiast' profile by blending historical aesthetic with modern display technology. It’s a high-quality desk accessory that serves as a conversation piece, allowing her to customize her workspace. It demonstrates an appreciation for her hobby's aesthetic side beyond just utility.",
+    "url": "https://eleksmaker.com/",
+    "category": "Retro Tech / Desktop",
+    "product_image_url": "https://m.media-amazon.com/images/I/61M3K1W7W0L._AC_SL1001_.jpg"
+  },
+  {
+    "name": "3Doodler Create+ 3D Printing Pen",
+    "description": "A professional-grade 3D printing pen that allows her to 'draw' 3D objects in the air using heated plastic. It features dual-speed controls and is compatible with various types of plastics (PLA, ABS, Flex). Emotional Tone: Creative and Empowering. Originality Score: 8/10.",
+    "price": "£75.00",
+    "why_it_fits": "This gift moves her technology interest from consumption to creation. It’s an approachable entry point into 3D design and engineering. For a daughter who enjoys the 'how things work' aspect of tech, this provides a tactile, hands-on way to manifest her ideas into physical reality.",
+    "url": "https://the3doodler.com/",
+    "category": "Creative Engineering",
+    "product_image_url": "https://m.media-amazon.com/images/I/71Xo+9m8DPL._AC_SL1500_.jpg"
+  },
+  {
+    "name": "Click and Grow Smart Garden 3",
+    "description": "An automated indoor garden that uses NASA-inspired 'Smart Soil' and integrated LED grow lights to maintain plants automatically. It monitors water, light, and nutrients via built-in sensors. Emotional Tone: Calm and Growth-oriented. Originality Score: 7/10.",
+    "price": "£85.00",
+    "why_it_fits": "It combines 'set-it-and-forget-it' technology with the emotional benefit of caring for living things. It’s perfect for a tech-savvy daughter who wants to brighten her room or flat but appreciates the efficiency of an automated system. It represents a 'smart home' lifestyle choice that is both healthy and high-tech.",
+    "url": "https://www.clickandgrow.com/",
+    "category": "Bio-Tech / Smart Home",
+    "product_image_url": "https://m.media-amazon.com/images/I/71u9I9+NqFL._AC_SL1500_.jpg"
+  }
+]

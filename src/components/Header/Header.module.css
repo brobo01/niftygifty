@@ -1,0 +1,36 @@
+.header {
+  /* position: fixed; */
+  top: 0;
+  width: 100%;
+  background: white;
+  height: fit-content;
+  border-bottom: 2px solid var(--border-soft);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.logo {
+  height: 25px;
+}
+.header_text {
+  display: none;
+}
+
+.accent {
+  color: var(--accent-gold);
+}
+
+@media (min-width: 767px) {
+  .header {
+    flex-direction: row;
+  }
+  .logo {
+    height: 50px;
+  }
+  .header_text {
+    display: block;
+  }
+}

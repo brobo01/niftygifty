@@ -1,6 +1,40 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-main: #f7f4ef;
+  --bg-light: #fdfaf6;
+  --card: #ffffff;
+
+  --text-primary: #1f1f1f;
+  --text-secondary: #6b6b6b;
+
+  --accent-pink: #e9a5b5;
+  --accent-pink-light: #f5d6de;
+
+  --accent-lavender: #b693ff;
+  --accent-lavender-light: #e9deff;
+
+  --accent-gold: #e7c58a;
+
+  --button-dark: #1d2233;
+
+  --border-soft: #eae4dc;
+  --success: #8ac7a1;
+  --hero-title: 30px;
+  --section-title: 24px;
+  --card-title: 14px;
+  --body: 12px;
+  --small: 10px;
+  --secondary-font-family: "Inter", sans-serif;
+  --primary-font-family: "Cormorant Garamond", serif;
+}
+
+@media (min-width: 767px) {
+  :root {
+    --hero-title: 72px;
+    --section-title: 42px;
+    --card-title: 18px;
+    --body: 16px;
+    --small: 14px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,4 +80,20 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cormorant Garamond", serif;
+  line-height: 1;
+}
+
+p {
+  font-family: "Inter", sans-serif;
+  line-height: 2rem;
+  color: var(--text-secondary);
 }

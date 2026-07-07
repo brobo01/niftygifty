@@ -1,0 +1,13 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+xmlns="http://www.w3.org/2000/svg">
+  <rect x="4" y="9" width="16" height="11" rx="2"
+        stroke="#e9a5b5" stroke-width="1.2"/>
+  <path d="M12 9V20"
+        stroke="#e9a5b5" stroke-width="1.2"/>
+  <path d="M4 13H20"
+        stroke="#e9a5b5" stroke-width="1.2"/>
+  <path d="M12 9C10 9 8 8 8 6.5C8 5.5 8.8 5 9.7 5C11 5 12 6.2 12 9Z"
+        stroke="#e9a5b5" stroke-width="1.2"/>
+  <path d="M12 9C14 9 16 8 16 6.5C16 5.5 15.2 5 14.3 5C13 5 12 6.2 12 9Z"
+        stroke="#e9a5b5" stroke-width="1.2"/>
+</svg>

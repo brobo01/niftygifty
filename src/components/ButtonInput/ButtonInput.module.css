@@ -1,0 +1,226 @@
+.active,
+.inactive {
+  font-family: "Inter", sans-serif;
+  color: var(--text-secondary);
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-soft);
+  border-radius: 5px;
+  font-size: var(--body);
+  transition: all 0.2s;
+  padding: 5px 10px;
+  margin: 1px;
+}
+.active {
+  border-color: var(--accent-lavender);
+  background-color: var(--accent-lavender-light);
+}
+
+.inactive {
+}
+
+.button_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .active,
+  .inactive {
+    padding: 10px 20px;
+  }
+}
+
+.searchIcon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #b5a99a;
+  font-size: 14px;
+  pointer-events: none;
+  font-family: sans-serif;
+}
+
+.input {
+  width: 100%;
+  padding: 13px 16px 13px 40px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  color: #1a1510;
+  background: #ffffff;
+  border: 1.5px solid #e0d9d0;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+
+.input::placeholder {
+  color: #b5a99a;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #1a1510;
+  box-shadow: 0 0 0 3px rgba(26, 21, 16, 0.07);
+}
+
+.clearButton {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #a09080;
+  font-size: 16px;
+  line-height: 1;
+  padding: 2px 4px;
+}
+
+.resultCount {
+  font-family: "DM Mono", "Courier New", monospace;
+  font-size: 11px;
+  color: #a09080;
+  letter-spacing: 0.08em;
+  margin-top: 12px;
+}
+
+/* ─── Grid ────────────────────────────────────────────────── */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  /* Needed so GSAP Flip can absolute-position departing cards correctly */
+  position: relative;
+}
+
+/* ─── Card wrapper ────────────────────────────────────────── */
+/*
+  Visibility is controlled entirely by GSAP (opacity, scale, position).
+  data-hidden is used only to signal intent; GSAP reads it in useLayoutEffect.
+  No CSS transitions here — GSAP owns the animation.
+*/
+
+.cardWrapper {
+  /* Cards hidden by GSAP start invisible until the Flip.from() runs */
+  will-change: transform, opacity;
+}
+
+/* ─── Card ────────────────────────────────────────────────── */
+
+.card {
+  background: #ffffff;
+  border: 1.5px solid #e8e4df;
+  border-radius: 4px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  box-sizing: border-box;
+  transition:
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+  /* Note: no transform transition here — GSAP handles transforms */
+}
+
+.card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.09);
+  border-color: #c8bfb5;
+}
+
+.cardCorner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, transparent 50%, #f5f1ec 50%);
+  border-bottom-left-radius: 4px;
+}
+
+.cardCategory {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.categoryIcon {
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: 18px;
+  color: #a09080;
+  line-height: 1;
+}
+
+.categoryLabel {
+  font-family: "DM Mono", "Courier New", monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #a09080;
+  font-weight: 500;
+}
+
+.cardTitle {
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #1a1510;
+  margin: 0;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.cardDescription {
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  color: #6b5f52;
+  margin: 0;
+  line-height: 1.65;
+  flex-grow: 1;
+}
+
+.cardTag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 2px;
+  font-size: 11px;
+  font-family: "DM Mono", "Courier New", monospace;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  /* colours applied via inline style since they're data-driven */
+}
+
+/* ─── Empty state ─────────────────────────────────────────── */
+
+.emptyState {
+  text-align: center;
+  padding: 80px 20px;
+  color: #b5a99a;
+  font-family: "DM Serif Display", Georgia, serif;
+  font-size: 22px;
+  opacity: 0;
+  animation: fadeIn 0.3s ease 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ─── Responsive ──────────────────────────────────────────── */
+
+@media (max-width: 600px) {
+  .wrap {
+    padding: 40px 20px;
+  }
+}
