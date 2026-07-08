@@ -8,27 +8,36 @@ export default function SwiperButtons(props) {
   const { filters } = useStore()
   const swiper = useSwiper()
 
+  // const isEmpty = (value) => {
+  //   // null or undefined
+  //   if (value === null) return true
+
+  //   if (value === false) return true
+
+  //   // String
+  //   if (typeof value === "string") {
+  //     return value.trim().length === 0
+  //   }
+
+  //   // Array
+  //   if (Array.isArray(value)) {
+  //     return value.length === 0
+  //   }
+
+  //   // Object
+  //   if (typeof value === "object") {
+  //     return Object.keys(value).length === 0
+  //   }
+
+  //   return false
+  // }
+
   const isEmpty = (value) => {
-    // null or undefined
-    if (value === null) return true
-
+    if (value === null || value === undefined) return true
     if (value === false) return true
-
-    // String
-    if (typeof value === "string") {
-      return value.trim().length === 0
-    }
-
-    // Array
-    if (Array.isArray(value)) {
-      return value.length === 0
-    }
-
-    // Object
-    if (typeof value === "object") {
-      return Object.keys(value).length === 0
-    }
-
+    if (typeof value === "string") return value.trim().length === 0
+    if (Array.isArray(value)) return value.length === 0
+    if (typeof value === "object") return Object.keys(value).length === 0
     return false
   }
 

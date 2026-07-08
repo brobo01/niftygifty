@@ -13,6 +13,8 @@ export const useStore = create((set) => ({
     personality: {},
   },
   loading: false,
+  error: false,
+  errorText: "Help",
 
   // flexible updater
   updateFilter: (key, value, type = "replace") =>
@@ -66,6 +68,14 @@ export const useStore = create((set) => ({
   toggleLoading: () => {
     set((state) => ({
       loading: !state.loading,
+    }))
+  },
+
+  updateError: (error) => {
+    set((state) => ({
+      loading: false,
+      error: true,
+      errorText: "There has been an error",
     }))
   },
 }))

@@ -36,6 +36,7 @@ export default function InputsSwiper(props) {
       primaryData: relationshipToRecipient.options,
       heading: "Who are we buying for?",
       first: true,
+      last: false,
       textFilter: true,
     },
     {
@@ -45,6 +46,8 @@ export default function InputsSwiper(props) {
       primaryData: giftOccasion.options,
       heading: "What's the occasion?",
       textFilter: true,
+      first: false,
+      last: false,
     },
     {
       key: "occasionImportance",
@@ -52,6 +55,8 @@ export default function InputsSwiper(props) {
       type: "replace",
       primaryData: giftOccasion.intensityOptions,
       heading: "How important is it?",
+      first: false,
+      last: false,
     },
     {
       key: "budget",
@@ -59,6 +64,8 @@ export default function InputsSwiper(props) {
       type: "replace",
       primaryData: budget.options,
       heading: "How much do we have to spend?",
+      first: false,
+      last: false,
     },
     {
       key: "budgetFlex",
@@ -66,6 +73,8 @@ export default function InputsSwiper(props) {
       type: "replace",
       primaryData: ["No", "Yes"],
       heading: "Is the budget flexible?",
+      first: false,
+      last: false,
     },
     {
       key: "interests",
@@ -74,18 +83,23 @@ export default function InputsSwiper(props) {
       primaryData: interestsHobbies.options,
       heading: "What are they into?",
       textFilter: true,
+      first: false,
+      last: false,
     },
     {
       key: "personality",
       input: "Sliders",
       primaryData: personality,
       heading: "What are they like?",
+      first: false,
+      last: false,
     },
     {
       key: "confirm",
       input: "ButtonConfirm",
       label: "Confirm",
       component: ButtonConfirm,
+      first: false,
       last: true,
       heading: "Almost there, let's recap",
     },
